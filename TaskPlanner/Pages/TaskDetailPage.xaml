@@ -1,0 +1,12 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskPlanner.Pages.TaskDetailPage"
+             Title="Detalji Obaveze">
+    <VerticalStackLayout Padding="20">
+        <Label Text="Naziv:" />
+        <Label x:Name="taskNameLabel" FontSize="20" />
+        <Label Text="Opis:" />
+        <Label x:Name="taskDescriptionLabel" FontSize="16" />
+        <Button Text="Izbriši" Clicked="OnDeleteTaskClicked" BackgroundColor="Red" TextColor="White"/>
+    </VerticalStackLayout>
+</ContentPage>

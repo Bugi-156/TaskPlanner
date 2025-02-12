@@ -1,0 +1,25 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskPlanner.MainPage"
+             BackgroundColor="{StaticResource DarkLavender}">
+
+    <VerticalStackLayout Padding="20">
+        <Button Text="Dodaj Obavezu" 
+                Clicked="OnAddTaskClicked" 
+                BackgroundColor="{StaticResource DustyPink}" 
+                TextColor="White"/>
+
+        <CollectionView x:Name="taskListView" SelectionChanged="OnTaskSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Padding="10" 
+                                         BackgroundColor="{StaticResource WarmRed}" 
+                                         Margin="5">
+                        <Label x:Name="taskNameLabel" Text="{Binding Name}" FontSize="20" TextColor="White"/>
+                        <Label x:Name="taskDescriptionLabel" Text="{Binding Description}" FontSize="14" TextColor="White"/>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
